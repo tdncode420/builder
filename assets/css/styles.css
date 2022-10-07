@@ -1,0 +1,112 @@
+* {
+  font-family: 'Aldrich';
+}
+
+.ele_opts {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#font_opts {
+  overflow-y: hidden;
+}
+
+#font_color_in:hover {
+  cursor: pointer;
+}
+
+.photo_gal {
+  display: none;
+}
+
+#font_opts {
+  overflow-y: auto;
+}
+
+#custom_transform_x_in {
+  display: none;
+}
+
+#custom_transform_y_in {
+  display: none;
+}
+
+#custom_transform_z_in {
+  display: none;
+}
+
+#custom_perspective_originx_out {
+  display: none;
+}
+
+#custom_perspective_originy_out {
+  display: none;
+}
+
+.flex_list {
+  display: none;
+}
+
+.btn {
+  width: 100%;
+  border-radius: 0px;
+  color: rgb(0,0,0);
+  font-weight: bold;
+  border-style: outset;
+  background: radial-gradient(#a6abd8 0%, #737086 100%);
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+  border-color: #e9ecef #e9ecef #dee2e6;
+  isolation: isolate;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.side-opt {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+.selected-view {
+  font-weight: bolder;
+}
+
+#close-bottom {
+  cursor: pointer;
+}
+
+.btn-check:focus+.btn-primary,
+.btn-primary:focus {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+  box-shadow: 0 0 0 .25rem rgba(49, 132, 253, .5);
+}
+
+.btn-check:active+.btn-primary:focus,
+.btn-check:checked+.btn-primary:focus,
+.btn-primary.active:focus,
+.btn-primary:active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 .25rem rgba(49, 132, 253, .5);
+}
+
+
+.element {
+  cursor: pointer;
+}
+
+.element:hover {
+  border: 1px solid red;
+}

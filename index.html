@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aldrich&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aldrich">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/typicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="width: 100vw;height: 100vh;min-height: 0px;font-family: Aldrich, sans-serif;overflow:hidden;">
+    <div class="d-flex justify-content-center align-items-center" style="width: 100%;height: 5%;">
+        <div class="d-flex" style="margin-right: 4%;width: 5%;height: 100%;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-zoom-out m-auto" style="font-size: 22px;">
+                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"></path>
+                <path d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z"></path>
+                <path fill-rule="evenodd" d="M3 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"></path>
+            </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-zoom-in m-auto" style="font-size: 22px;">
+                <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"></path>
+                <path d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z"></path>
+                <path fill-rule="evenodd" d="M6.5 3a.5.5 0 0 1 .5.5V6h2.5a.5.5 0 0 1 0 1H7v2.5a.5.5 0 0 1-1 0V7H3.5a.5.5 0 0 1 0-1H6V3.5a.5.5 0 0 1 .5-.5z"></path>
+            </svg></div>
+        <div class="d-flex" style="margin-right: 10%;width: 17%;height: 100%;"><i class="fa fa-mobile m-auto" style="font-size: 22px;"></i><i class="fa fa-tablet m-auto" style="font-size: 22px;"></i><i class="fa fa-laptop m-auto" style="font-size: 22px;"></i><i class="fa fa-desktop m-auto" style="font-size: 22px;"></i></div><span class="d-flex justify-content-center align-items-center" style="height: 100%;padding-right: 5px;padding-left: 5px;border-width: 2px;border-style: outset;cursor:pointer;"><strong>View Live&nbsp;</strong><i class="fas fa-broadcast-tower" style="font-size: 28px;"></i></span>
+    </div>
+    <div class="d-flex" style="width: 100%;height: 95%;">
+        <div style="width: 4%;height: 100%;border-width: .5px;border-style: ridge;">
+            <div class="d-flex flex-column justify-content-center align-items-center side-opt" style="width: 100%;height: 10%;padding: 0px;border-width: 2.4px;border-style: outset;">
+                <p style="margin-bottom: 0px;font-size: 11px;font-weight: bold;">BUILD</p><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="width: 100%;height: 100%;">
+                    <path d="M4 8C4.55228 8 5 7.55228 5 7C5 6.44772 4.55228 6 4 6C3.44772 6 3 6.44772 3 7C3 7.55228 3.44772 8 4 8Z" fill="currentColor"></path>
+                    <path d="M8 7C8 7.55228 7.55228 8 7 8C6.44772 8 6 7.55228 6 7C6 6.44772 6.44772 6 7 6C7.55228 6 8 6.44772 8 7Z" fill="currentColor"></path>
+                    <path d="M10 8C10.5523 8 11 7.55228 11 7C11 6.44772 10.5523 6 10 6C9.44771 6 9 6.44772 9 7C9 7.55228 9.44771 8 10 8Z" fill="currentColor"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 3C1.34315 3 0 4.34315 0 6V18C0 19.6569 1.34315 21 3 21H21C22.6569 21 24 19.6569 24 18V6C24 4.34315 22.6569 3 21 3H3ZM21 5H3C2.44772 5 2 5.44772 2 6V9H22V6C22 5.44772 21.5523 5 21 5ZM2 18V11H22V18C22 18.5523 21.5523 19 21 19H3C2.44772 19 2 18.5523 2 18Z" fill="currentColor"></path>
+                </svg>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center side-opt" style="width: 100%;height: 10%;padding: 0px;border-width: 2.4px;border-style: outset;">
+                <p style="margin-bottom: 0px;font-size: 11px;font-weight: bold;">ASSETS</p><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="width: 100%;height: 100%;">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 1.5C2.89543 1.5 2 2.39543 2 3.5V4.5C2 4.55666 2.00236 4.61278 2.00698 4.66825C0.838141 5.07811 0 6.19118 0 7.5V19.5C0 21.1569 1.34315 22.5 3 22.5H21C22.6569 22.5 24 21.1569 24 19.5V7.5C24 5.84315 22.6569 4.5 21 4.5H11.874C11.4299 2.77477 9.86384 1.5 8 1.5H4ZM9.73244 4.5C9.38663 3.9022 8.74028 3.5 8 3.5H4V4.5H9.73244ZM3 6.5C2.44772 6.5 2 6.94772 2 7.5V19.5C2 20.0523 2.44772 20.5 3 20.5H21C21.5523 20.5 22 20.0523 22 19.5V7.5C22 6.94772 21.5523 6.5 21 6.5H3Z" fill="currentColor"></path>
+                </svg>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center side-opt" style="width: 100%;height: 10%;padding: 0px;border-width: 2.4px;border-style: outset;">
+                <p style="margin-bottom: 0px;font-size: 11px;font-weight: bold;">SCRIPT</p><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="width: 100%;height: 100%;">
+                    <path d="M9 21.5L17.5 13L13 10L15 2.5L6.5 11L11 14L9 21.5Z" fill="currentColor"></path>
+                </svg>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center side-opt" style="width: 100%;height: 10%;padding: 0px;border-width: 2.4px;border-style: outset;">
+                <p style="margin-bottom: 0px;font-size: 11px;font-weight: bold;">DATA</p><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="width: 100%;height: 100%;">
+                    <path d="M5 9V7H7V9H5Z" fill="currentColor"></path>
+                    <path d="M9 9H19V7H9V9Z" fill="currentColor"></path>
+                    <path d="M5 15V17H7V15H5Z" fill="currentColor"></path>
+                    <path d="M19 17H9V15H19V17Z" fill="currentColor"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1 6C1 4.34315 2.34315 3 4 3H20C21.6569 3 23 4.34315 23 6V18C23 19.6569 21.6569 21 20 21H4C2.34315 21 1 19.6569 1 18V6ZM4 5H20C20.5523 5 21 5.44772 21 6V11H3V6C3 5.44772 3.44772 5 4 5ZM3 13V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V13H3Z" fill="currentColor"></path>
+                </svg>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center side-opt" style="width: 100%;height: 10%;padding: 0px;border-width: 2.4px;border-style: outset;">
+                <p style="margin-bottom: 0px;font-size: 11px;font-weight: bold;">CODE</p><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="width: 100%;height: 100%;">
+                    <path d="M9.95263 16.9123L8.59323 18.3608L2.03082 12.2016L8.18994 5.63922L9.64826 7.00791L4.85783 12.112L9.95212 16.8932L9.95263 16.9123Z" fill="currentColor"></path>
+                    <path d="M14.0474 16.9123L15.4068 18.3608L21.9692 12.2016L15.8101 5.63922L14.3517 7.00791L19.1422 12.112L14.0479 16.8932L14.0474 16.9123Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="d-flex" id="build-wrapper" style="height: 100%;width: 96%;padding: 0px;background: #c8c8c8;">
+            <div style="width: 10.5%;height: 100%;border-width: .5px;border-style: ridge;">
+                <div style="width: 100%;border-radius: 0px;"><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1" role="button">CONTAINERS</a>
+                    <div class="collapse" id="collapse-1">
+                        <ul class="list-unstyled" style="width: 100%;text-align: center;">
+                            <li class="element" style="border-width: 1px;border-style: outset;color: rgb(0,0,0);font-weight: bold;" data-html="<div></div>"><i class="fa fa-square-o" style="margin-right: 5px;font-size: 20px;"></i>Div</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<span></span>"><i class="fa fa-square-o" style="margin-right: 5px;font-size: 12px;"></i>Span</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="width: 100%;border-radius: 0px;"><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-6" href="#collapse-6" role="button" style="width: 100%;border-radius: 0px;border-style: outset;font-weight: bold;color: rgb(10,9,9);">INPUTS</a>
+                    <div class="collapse" id="collapse-6">
+                        <ul class="list-unstyled" style="width: 100%;text-align: center;">
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<input type=\&quot;checkbox\&quot;>"><i class="fa fa-check-square-o" style="margin-right: 5px;"></i>Checkbox</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<input type=\&quot;color\&quot;>"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="margin-right: 5px;">
+                                    <path d="M20.3847 2.87868C19.2132 1.70711 17.3137 1.70711 16.1421 2.87868L14.0202 5.00052L13.313 4.29332C12.9225 3.9028 12.2894 3.9028 11.8988 4.29332C11.5083 4.68385 11.5083 5.31701 11.8988 5.70754L17.5557 11.3644C17.9462 11.7549 18.5794 11.7549 18.9699 11.3644C19.3604 10.9739 19.3604 10.3407 18.9699 9.95018L18.2629 9.24316L20.3847 7.12132C21.5563 5.94975 21.5563 4.05025 20.3847 2.87868Z" fill="currentColor"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9297 7.09116L4.1515 14.8693C3.22786 15.793 3.03239 17.169 3.5651 18.2842L1.99994 19.8493L3.41415 21.2635L4.97931 19.6984C6.09444 20.2311 7.4705 20.0356 8.39414 19.112L16.1723 11.3338L11.9297 7.09116ZM13.3439 11.3338L11.9297 9.91959L5.56571 16.2835C5.17518 16.6741 5.17518 17.3072 5.56571 17.6978C5.95623 18.0883 6.5894 18.0883 6.97992 17.6978L13.3439 11.3338Z" fill="currentColor"></path>
+                                </svg>Color</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<input type=\&quot;date\&quot;>"><i class="far fa-calendar-alt" style="margin-right: 5px;"></i>Date</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<input type=\&quot;email\&quot;>"><i class="icon ion-email" style="margin-right: 5px;"></i>Email</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<input type=\&quot;file\&quot;>"><i class="far fa-file-alt" style="margin-right: 5px;"></i>File</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<input type=\&quot;image\&quot;>"><i class="far fa-file-image" style="margin-right: 5px;"></i>Image</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<input type=\&quot;number\&quot;>"><i class="typcn typcn-sort-numerically-outline" style="margin-right: 5px;"></i>Number</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<input type=\&quot;password\&quot;>"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="margin-right: 5px;">
+                                    <path d="M6 12C6 12.5523 5.55228 13 5 13C4.44772 13 4 12.5523 4 12C4 11.4477 4.44772 11 5 11C5.55228 11 6 11.4477 6 12Z" fill="currentColor"></path>
+                                    <path d="M9 13C9.55228 13 10 12.5523 10 12C10 11.4477 9.55228 11 9 11C8.44771 11 8 11.4477 8 12C8 12.5523 8.44771 13 9 13Z" fill="currentColor"></path>
+                                    <path d="M14 12C14 12.5523 13.5523 13 13 13C12.4477 13 12 12.5523 12 12C12 11.4477 12.4477 11 13 11C13.5523 11 14 11.4477 14 12Z" fill="currentColor"></path>
+                                    <path d="M20 11H16V13H20V11Z" fill="currentColor"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C0.895431 6 0 6.89543 0 8V16C0 17.1046 0.89543 18 2 18H22C23.1046 18 24 17.1046 24 16V8C24 6.89543 23.1046 6 22 6H2ZM22 8H2L2 16H22V8Z" fill="currentColor"></path>
+                                </svg>Password</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<input type=\&quot;radio\&quot;>"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="margin-right: 5px;">
+                                    <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="currentColor"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z" fill="currentColor"></path>
+                                </svg>Radio</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<input type=\&quot;text\&quot;>"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-fonts" style="margin-right: 5px;">
+                                    <path d="M12.258 3h-8.51l-.083 2.46h.479c.26-1.544.758-1.783 2.693-1.845l.424-.013v7.827c0 .663-.144.82-1.3.923v.52h4.082v-.52c-1.162-.103-1.306-.26-1.306-.923V3.602l.431.013c1.934.062 2.434.301 2.693 1.846h.479L12.258 3z"></path>
+                                </svg>Text</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<input type=\&quot;tele\&quot;>"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-telephone-fill" style="margin-right: 5px;">
+                                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                                </svg>Telephone</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<input type=\&quot;time\&quot;>"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="margin-right: 5px;">
+                                    <path d="M9 7H11V12H16V14H9V7Z" fill="currentColor"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z" fill="currentColor"></path>
+                                </svg>Time</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<input type=\&quot;url\&quot;>"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="margin-right: 5px;">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14 7C13.4477 7 13 7.44772 13 8V16C13 16.5523 13.4477 17 14 17H18C18.5523 17 19 16.5523 19 16V8C19 7.44772 18.5523 7 18 7H14ZM17 9H15V15H17V9Z" fill="currentColor"></path>
+                                    <path d="M6 7C5.44772 7 5 7.44772 5 8C5 8.55228 5.44772 9 6 9H10C10.5523 9 11 8.55228 11 8C11 7.44772 10.5523 7 10 7H6Z" fill="currentColor"></path>
+                                    <path d="M6 11C5.44772 11 5 11.4477 5 12C5 12.5523 5.44772 13 6 13H10C10.5523 13 11 12.5523 11 12C11 11.4477 10.5523 11 10 11H6Z" fill="currentColor"></path>
+                                    <path d="M5 16C5 15.4477 5.44772 15 6 15H10C10.5523 15 11 15.4477 11 16C11 16.5523 10.5523 17 10 17H6C5.44772 17 5 16.5523 5 16Z" fill="currentColor"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 3C2.34315 3 1 4.34315 1 6V18C1 19.6569 2.34315 21 4 21H20C21.6569 21 23 19.6569 23 18V6C23 4.34315 21.6569 3 20 3H4ZM20 5H4C3.44772 5 3 5.44772 3 6V18C3 18.5523 3.44772 19 4 19H20C20.5523 19 21 18.5523 21 18V6C21 5.44772 20.5523 5 20 5Z" fill="currentColor"></path>
+                                </svg>URL</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="width: 100%;border-radius: 0px;"><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-5" href="#collapse-5" role="button" style="width: 100%;border-radius: 0px;border-style: outset;font-weight: bold;color: rgb(0,0,0);">GROUPS</a>
+                    <div class="collapse" id="collapse-5">
+                        <ul class="list-unstyled" style="width: 100%;text-align: center;">
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;"><i class="fa fa-ellipsis-h" style="margin-right: 5px;"></i>List Inline</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;"><i class="fa fa-list-ol" style="margin-right: 5px;"></i>List Ordered</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<ul></ul>"><i class="fa fa-list-ul" style="margin-right: 5px;"></i>List Unordered</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<ul style=\&quot;list-style:none;\&quot;></ul>"><i class="fa fa-bars" style="margin-right: 5px;"></i>List Unstyled</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<select><select>"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-select" style="margin-right: 5px;">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                                    <path d="M9 11l3 3l3 -3"></path>
+                                </svg>Select</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<table><table>"><i class="fa fa-table" style="margin-right: 5px;"></i>Table</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<td></td>"><i class="icon ion-android-checkbox-outline-blank" style="margin-right: 5px;width: 17px;font-size: 14px;"></i>Table Cell</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<tr></tr>"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-rectangle" style="margin-right: 5px;width: 17px;">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                </svg>Table Row</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="width: 100%;border-radius: 0px;"><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-4" href="#collapse-4" role="button" style="width: 100%;border-radius: 0px;border-style: outset;color: rgb(0,0,0);font-weight: bold;">MEDIA</a>
+                    <div class="collapse" id="collapse-4">
+                        <ul class="list-unstyled" style="width: 100%;text-align: center;">
+                            <li class="element" class="d-flex justify-content-center align-items-center" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<audio controls><source src=&quot;&quot; type=&quot;audio/mp3&quot;>"><i class="material-icons d-flex justify-content-center align-items-center" style="height: 23px;font-size: 19px;margin-right: 5px;">audiotrack</i>Audio</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<canvas></canvas>"><i class="fas fa-shapes" style="margin-right: 5px;"></i>Canvas</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<iframe></iframe>"><i class="icon-frame" style="margin-right: 5px;"></i>Iframe</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<img src=&quot;&quot; alt=&quot;image alt&quot;>"><i class="fa fa-image" style="margin-right: 5px;"></i>Image</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<video width=&quot;320&quot; height=&quot;240&quot; controls><source src=&quot;&quot; type=&quot;video/mp4&quot;></video>"><i class="fa fa-video-camera" style="margin-right: 5px;"></i>Video</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="width: 100%;border-radius: 0px;"><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-3" href="#collapse-3" role="button" style="width: 100%;border-radius: 0px;border-style: outset;color: rgb(0,0,0);font-weight: bold;">TEXT</a>
+                    <div class="collapse" id="collapse-3">
+                        <ul class="list-unstyled" style="width: 100%;text-align: center;">
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<strong></strong>"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-type-bold" style="margin-right: 5px;">
+                                    <path d="M8.21 13c2.106 0 3.412-1.087 3.412-2.823 0-1.306-.984-2.283-2.324-2.386v-.055a2.176 2.176 0 0 0 1.852-2.14c0-1.51-1.162-2.46-3.014-2.46H3.843V13H8.21zM5.908 4.674h1.696c.963 0 1.517.451 1.517 1.244 0 .834-.629 1.32-1.73 1.32H5.908V4.673zm0 6.788V8.598h1.73c1.217 0 1.88.492 1.88 1.415 0 .943-.643 1.449-1.832 1.449H5.907z"></path>
+                                </svg>Bold</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<em></em>"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-type-italic" style="margin-right: 5px;">
+                                    <path d="M7.991 11.674 9.53 4.455c.123-.595.246-.71 1.347-.807l.11-.52H7.211l-.11.52c1.06.096 1.128.212 1.005.807L6.57 11.674c-.123.595-.246.71-1.346.806l-.11.52h3.774l.11-.52c-1.06-.095-1.129-.211-1.006-.806z"></path>
+                                </svg>Italic</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<p></p>"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-link-45deg" style="margin-right: 5px;">
+                                    <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"></path>
+                                    <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"></path>
+                                </svg>Link</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<p></p>"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-paragraph" style="margin-right: 5px;">
+                                    <path d="M10.5 15a.5.5 0 0 1-.5-.5V2H9v12.5a.5.5 0 0 1-1 0V9H7a4 4 0 1 1 0-8h5.5a.5.5 0 0 1 0 1H11v12.5a.5.5 0 0 1-.5.5z"></path>
+                                </svg>Paragraph</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<sub></sub>"><i class="fa fa-subscript" style="margin-right: 5px;"></i>Subscript</li>
+                            <li class="element" style="border-width: 1px;border-style: outset;font-weight: bold;" data-html="<sup></sup>"><i class="fa fa-superscript" style="margin-right: 5px;"></i>Superscript</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center" style="height: 100%;width: 0.5%;background: #727272;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-grip-vertical" style="color: rgb(255,255,255);font-size: 31px;width: 29.7125px;height: 36px;">
+                    <path d="M7 2a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                </svg></div>
+            <div style="width: 76%;height: 100%;margin: 5px;">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-bs-toggle="tab" href="#tab-1">Untitled</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-bs-toggle="tab" href="#tab-2">+ New Page</a></li>
+                </ul>
+                <div class="tab-content" style="width: 100%;height: 100%;background: #ffffff;">
+                    <div class="tab-pane active" role="tabpanel" id="tab-1">
+                        <div></div>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="tab-2">
+                        <p>Content for tab 2.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center" style="height: 100%;width: 0.5%;background: #727272;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-grip-vertical" style="color: rgb(255,255,255);font-size: 31px;width: 29.7125px;height: 36px;">
+                    <path d="M7 2a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-3 3a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
+                </svg></div>
+            <div style="width: 14.5%;height: 100%;border-width: .5px;border-style: ridge;background: rgba(0,0,0,0);">
+                <div style="width: 100%;border-width: 7.4px;border-style: none;color: rgb(255,255,255);font-size: 12px;height: 100%;min-height: 100%;max-height: 100%;">
+                    <ul class="nav nav-tabs" role="tablist" style="width: 100%;background: white;font-size: 12px;height: 8%;color: rgba(0,0,0,0);">
+                        <li class="nav-item" role="presentation" style="width: 25%;text-align: left;font-size: 12px;height: 50%;"><a class="nav-link active text-nowrap text-truncate d-flex justify-content-center align-items-center" role="tab" data-bs-toggle="tab" href="#font_opts" style="font-size: 11px;padding: 0px;margin: 0px;text-align: center;width: 100%;height: 100%;background: rgb(255,255,255);"><strong>FONT</strong></a></li>
+                        <li class="nav-item text-nowrap text-truncate" role="presentation" style="width: 25%;text-align: left;font-size: 11px;height: 50%;color: rgb(0,0,0);padding: 0px;"><a class="nav-link text-nowrap text-truncate d-flex justify-content-center align-items-center" role="tab" data-bs-toggle="tab" href="#layout_opts" style="font-size: 11px;padding: 0px;margin: 0px;text-align: center;width: 100%;height: 100%;"><strong>LAYOUT</strong></a></li>
+                        <li class="nav-item text-nowrap text-truncate" role="presentation" style="width: 25%;text-align: left;font-size: 11px;height: 50%;padding: 0px;"><a class="nav-link text-nowrap text-truncate d-flex justify-content-center align-items-center" role="tab" data-bs-toggle="tab" href="#bg_opts" style="font-size: 11px;padding: 0px;margin: 0px;text-align: center;width: 100%;height: 100%;"><strong>BG</strong></a></li>
+                        <li class="nav-item text-nowrap text-truncate" role="presentation" style="width: 25%;text-align: left;font-size: 11px;height: 50%;padding: 0px;"><a class="nav-link text-nowrap text-truncate d-flex justify-content-center align-items-center" role="tab" data-bs-toggle="tab" href="#border_opts" style="font-size: 11px;padding: 0px;margin: 0px;text-align: center;width: 100%;height: 100%;"><strong>BORDER</strong></a></li>
+                        <li class="nav-item text-nowrap text-truncate" role="presentation" style="width: 33%;text-align: left;font-size: 11px;height: 50%;padding: 0px;"><a class="nav-link text-nowrap text-truncate d-flex justify-content-center align-items-center" role="tab" data-bs-toggle="tab" href="#shadows_opts" style="font-size: 11px;padding: 0px;margin: 0px;text-align: center;width: 100%;height: 100%;"><strong>SHADOWS</strong></a></li>
+                        <li class="nav-item text-nowrap text-truncate" role="presentation" style="width: 30%;text-align: left;font-size: 11px;height: 50%;padding: 0px;"><a class="nav-link text-nowrap text-truncate d-flex justify-content-center align-items-center" role="tab" data-bs-toggle="tab" href="#filters_opts" style="font-size: 11px;padding: 0px;margin: 0px;text-align: center;width: 100%;height: 100%;"><strong>FILTERS</strong></a></li>
+                        <li class="nav-item text-nowrap text-truncate" role="presentation" style="width: 36%;text-align: left;font-size: 11px;height: 50%;padding: 0px;"><a class="nav-link text-nowrap text-truncate d-flex justify-content-center align-items-center" role="tab" data-bs-toggle="tab" href="#transform_opts" style="font-size: 11px;padding: 0px;margin: 0px;text-align: center;width: 100%;height: 100%;"><strong>TRANSFORM</strong></a></li>
+                    </ul>
+                    <div class="tab-content" style="width: 100%;min-width: 100%;height: 90%;min-height: 90%;max-height: 90%;max-width: 100%;">
+                        <div class="tab-pane active ele_opts" role="tabpanel" id="font_opts" style="padding-left: 0px;padding-right: 0px;padding-top: 0px;width: 100%;min-width: 100%;max-width: 100%;height: 100%;min-height: 100%;max-height: 100%;color: rgb(0,0,0);background: #ffffff;">
+                            <ul class="list-unstyled" style="height: 100%;min-height: 100%;max-height: 100%;margin: 0px;font-size: 22px;width: 100%;min-width: 100%;max-width: 100%;text-align: center;background: #e8e8e8;">
+                                <li style="text-align: center;font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);margin-top: 0%;border-style: outset;background: #5b5b5b;color: rgb(255,255,255);">Color:<br></li>
+                                <li class="text-nowrap d-flex justify-content-evenly align-items-center" style="font-size: 14px;margin-top: 2%;margin-bottom: 2%;"><br><input type="text" id="color_in_txt" class="font-style" style="width: 46%;height: 23px;margin-right: 7px;font-size: 14px;border-style: none;padding-top: 4px;padding-bottom: 4px;" value="255,255,255" data-key="color" data-value="self" data-share="font_color_in"><input type="color" id="font_color_in" class="font-style" data-key="color" style="padding: 0px;padding-top: 0px;margin-top: 0px;width: 29px;font-size: 14px;padding-bottom: 0px;" data-value="self" data-share="color_in_txt"></li>
+                                <li style="text-align: center;font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);margin-top: 0%;border-style: outset;background: #5b5b5b;color: rgb(255,255,255);">Size:<br></li>
+                                <li class="text-nowrap d-flex justify-content-evenly align-items-center" style="font-size: 14px;margin-top: 2%;margin-bottom: 2%;"><br><input type="number" id="font-size_in" class="font-style" style="width: 59.6px;font-size: 19px;padding: 0;box-shadow: -2px 1px 3px rgba(0,0,0,0.77);height: 100%;padding-top: 0px;padding-bottom: 0px;" data-key="font-size" data-value="self" data-unit="font_size_unit"><strong>&nbsp;</strong><select id="font_size_unit" class="unit-opt" style="width: 53.2px;box-shadow: -3px 3px 7px rgba(0,0,0,0.61);font-size: 14px;padding-top: 4px;padding-bottom: 4px;" data-unitfor="font-size_in">
+                                        <optgroup label="ABSOLUTE LENGTHS">
+                                            <option value="px" selected="">px</option>
+                                            <option value="cm">cm</option>
+                                            <option value="mm">mm</option>
+                                            <option value="in">in</option>
+                                            <option value="pc">pc</option>
+                                        </optgroup>
+                                        <optgroup label="RELATIVE LENGTHS">
+                                            <option value="%">%</option>
+                                            <option value="em">em</option>
+                                            <option value="ex">ex</option>
+                                            <option value="ch">ch</option>
+                                            <option value="rem">rem</option>
+                                            <option value="vw">vw</option>
+                                            <option value="vh">vh</option>
+                                            <option value="vmin">vmin</option>
+                                            <option value="vmax">vmax</option>
+                                        </optgroup>
+                                    </select></li>
+                                <li style="text-align: center;font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);margin-top: 0%;border-style: outset;background: #5b5b5b;color: rgb(255,255,255);">Famly:<br></li>
+                                <li class="text-nowrap d-flex justify-content-evenly align-items-center" style="font-size: 14px;margin-top: 2%;margin-bottom: 2%;text-align: center;"><select id="font-family_in" class="font-style" style="width: 97px;box-shadow: -2px 2px 2px;font-size: 14px;" data-key="font-family" data-value="self">
+                                        <optgroup label="FONT FAMILY">
+                                            <option value="arial" selected="">Arial</option>
+                                            <option value="brush_script_mt">Brush Script MT</option>
+                                            <option value="courier_new">Courier New</option>
+                                            <option value="garamond">Garamond</option>
+                                            <option value="georgia">Georgia</option>
+                                            <option value="helvetica">Helvetica</option>
+                                            <option value="tahoma">Tahoma</option>
+                                            <option value="times_new_roman">Times New Roman</option>
+                                            <option value="verdana">Verdana</option>
+                                        </optgroup>
+                                    </select></li>
+                                <li style="text-align: center;font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);margin-top: 0%;border-style: outset;background: #5b5b5b;color: rgb(255,255,255);">Styles:<br></li>
+                                <li class="text-truncate d-flex justify-content-center align-items-center"><input type="checkbox" class="font-style" style="margin-left: 6px;border-right-style: groove;border-left-style: groove;" data-key="font-weight" data-value="bold"><span class="text-truncate" style="width: 50%;min-width: 50%;max-width: 50%;font-size: 15px;margin-left: 15px;border-right-style: none;border-left-style: none;"><strong>Bold</strong></span></li>
+                                <li class="text-truncate d-flex justify-content-center align-items-center"><input type="checkbox" class="font-style" style="margin-left: 6px;border-right-style: groove;border-left-style: groove;font-size: 15px;" data-key="font-style" data-value="italic"><span class="text-truncate" style="width: 50%;min-width: 50%;max-width: 50%;font-size: 15px;margin-left: 15px;border-right-style: none;border-left-style: none;"><em>Italic</em></span></li>
+                                <li class="text-truncate d-flex justify-content-center align-items-center"><input type="checkbox" class="font-style" style="margin-left: 6px;border-right-style: groove;border-left-style: groove;font-size: 15px;" data-key="text-decoration" data-value="underline"><span class="text-truncate" style="width: 50%;min-width: 50%;max-width: 50%;font-size: 15px;margin-left: 15px;border-right-style: none;border-left-style: none;"><span style="text-decoration: underline;">Underline</span></span></li>
+                                <li class="text-truncate d-flex justify-content-center align-items-center"><input type="checkbox" class="font-style" style="margin-left: 6px;border-right-style: groove;border-left-style: groove;font-size: 15px;" data-key="text-decoration" data-value="overline"><span class="text-truncate" style="width: 50%;min-width: 50%;max-width: 50%;font-size: 15px;margin-left: 15px;border-right-style: none;border-left-style: none;">Overline</span></li>
+                                <li class="text-truncate d-flex justify-content-center align-items-center"><input type="checkbox" class="font-style" style="margin-left: 6px;font-size: 15px;" data-key="text-decoration" data-value="line-through"><span class="text-truncate" style="width: 50%;min-width: 50%;max-width: 50%;font-size: 15px;margin-left: 15px;margin-top: 0px;"><strong><span style="text-decoration: line-through;">Line -through</span></strong></span></li>
+                                <li class="text-truncate d-flex justify-content-center align-items-center"></li>
+                                <li style="text-align: center;font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);margin-top: 0%;border-style: outset;background: #5b5b5b;color: rgb(255,255,255);">Casing:<br></li>
+                                <li class="text-truncate d-flex justify-content-center align-items-center"><input type="radio" class="font-style" style="margin-left: 6px;font-size: 15px;border-top-style: none;border-bottom-style: none;" data-key="casing" checked="" data-value="default"><span class="text-truncate" style="width: 50%;min-width: 50%;max-width: 50%;font-size: 15px;margin-left: 15px;margin-top: 0px;border-top-style: none;border-bottom-style: none;"><strong>Default</strong></span></li>
+                                <li class="text-truncate d-flex justify-content-center align-items-center"><input type="radio" class="font-style" style="margin-left: 6px;font-size: 15px;border-top-style: none;border-bottom-style: none;" data-key="casing" data-value="upper"><span class="text-truncate" style="width: 50%;min-width: 50%;max-width: 50%;font-size: 15px;margin-left: 15px;margin-top: 0px;border-top-style: none;border-bottom-style: none;"><strong>UPPER</strong></span></li>
+                                <li class="text-truncate d-flex justify-content-center align-items-center"><input type="radio" class="font-style" style="margin-left: 6px;font-size: 15px;" data-key="casing" data-value="lower"><span class="text-truncate" style="width: 50%;min-width: 50%;max-width: 50%;font-size: 15px;margin-left: 15px;margin-top: 0px;"><strong>lower</strong></span></li>
+                                <li class="text-truncate d-flex justify-content-center align-items-center"><input type="radio" class="font-style" style="margin-left: 6px;font-size: 15px;" data-key="casing" data-value="capitalize"><span class="text-truncate" style="width: 50%;min-width: 50%;max-width: 50%;font-size: 15px;margin-left: 15px;margin-top: 0px;"><strong>Capitalize</strong></span></li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane ele_opts" role="tabpanel" id="layout_opts" style="padding-left: 0px;padding-right: 0px;padding-top: 0px;height: 100%;min-height: 100%;max-height: 100%;font-size: 12px;width: 100%;min-width: 100%;max-width: 100%;color: rgb(0,0,0);background: #e8e8e8;">
+                            <ul class="list-unstyled d-flex flex-column justify-content-center align-items-center">
+                                <li style="text-align: center;font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);margin-top: 0%;border-style: outset;background: #5b5b5b;color: rgb(255,255,255);width: 100%;">Width:<br></li>
+                                <li class="text-truncate" style="text-shadow: -2px 3px 3px rgb(0,0,0);margin-top: 3px;padding-top: 2px;font-size: 9px;">&nbsp;<input type="number" id="width_in" class="layout-opt" style="width: 80.6px;font-size: 12px;" data-key="width" data-value="self" data-unit="width_unit"><select id="width_unit" class="unit_opt" style="width: 42.2px;font-size: 10px;" data-for="width">
+                                        <optgroup label="ABSOLUTE LENGTHS">
+                                            <option value="px" selected="">px</option>
+                                            <option value="cm">cm</option>
+                                            <option value="mm">mm</option>
+                                            <option value="in">in</option>
+                                            <option value="pc">pc</option>
+                                        </optgroup>
+                                        <optgroup label="RELATIVE LENGTHS">
+                                            <option value="%">%</option>
+                                            <option value="em">em</option>
+                                            <option value="ex">ex</option>
+                                            <option value="ch">ch</option>
+                                            <option value="rem">rem</option>
+                                            <option value="vw">vw</option>
+                                            <option value="vh">vh</option>
+                                            <option value="vmin">vmin</option>
+                                            <option value="vmax">vmax</option>
+                                        </optgroup>
+                                    </select></li>
+                                <li style="font-size: 12px;margin-top: 3%;">Min:&nbsp;<input type="number" id="min-width_in" class="layout-opt" style="width: 56.6px;font-size: 12px;" data-key="min-width" data-value="self" data-unit="width_unit">&nbsp;Max:&nbsp;<input type="number" id="max-width_in" class="layout-opt" style="width: 56.6px;font-size: 12px;" data-key="max-width" data-unit="width_unit" data-value="self"></li>
+                            </ul>
+                            <ul class="list-unstyled d-flex flex-column justify-content-center align-items-center">
+                                <li style="text-align: center;font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);margin-top: 0%;border-style: outset;background: #5b5b5b;color: rgb(232,232,232);width: 100%;">Height:<br></li>
+                                <li class="text-truncate" style="text-shadow: -2px 3px 3px rgb(0,0,0);margin-top: 3px;padding-top: 2px;font-size: 9px;">&nbsp;<input type="number" id="height_in" class="layout-opt" style="width: 80.6px;font-size: 12px;" data-key="height" data-value="self" data-unit="height_unit"><select id="height_unit" class="unit_opt" style="width: 42.2px;font-size: 10px;" data-for="height">
+                                        <optgroup label="ABSOLUTE LENGTHS">
+                                            <option value="px" selected="">px</option>
+                                            <option value="cm">cm</option>
+                                            <option value="mm">mm</option>
+                                            <option value="in">in</option>
+                                            <option value="pc">pc</option>
+                                        </optgroup>
+                                        <optgroup label="RELATIVE LENGTHS">
+                                            <option value="%">%</option>
+                                            <option value="em">em</option>
+                                            <option value="ex">ex</option>
+                                            <option value="ch">ch</option>
+                                            <option value="rem">rem</option>
+                                            <option value="vw">vw</option>
+                                            <option value="vh">vh</option>
+                                            <option value="vmin">vmin</option>
+                                            <option value="vmax">vmax</option>
+                                        </optgroup>
+                                    </select></li>
+                                <li style="font-size: 12px;margin-top: 3%;">Min:&nbsp;<input type="number" id="min-height_in" class="layout-opt" style="width: 52px;font-size: 12px;" data-css="min-height" data-key="min-height" data-value="self" data-unit="height_unit">&nbsp;Max:&nbsp;<input type="number" id="max-height_in" class="layout-opt" style="width: 52px;font-size: 12px;" data-css="max-height" data-key="max-height" data-value="self" data-unit="height_unit"></li>
+                            </ul>
+                            <ul class="list-unstyled d-flex flex-column justify-content-center align-items-center">
+                                <li style="text-align: center;font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);margin-top: 0%;border-style: outset;background: #5b5b5b;color: rgb(255,255,255);width: 100%;">Padding:<br></li>
+                                <li class="text-truncate" style="text-shadow: -2px 3px 3px rgb(0,0,0);margin-top: 3%;padding-top: 2px;">&nbsp;<input type="number" id="padding_in" class="layout-opt" style="width: 83.6px;font-size: 12px;" data-key="padding" data-value="self" data-unit="padding_unit"><select id="padding_unit" style="width: 42.2px;font-size: 10px;height: 14.2px;">
+                                        <optgroup label="ABSOLUTE LENGTHS">
+                                            <option value="px" selected="">px</option>
+                                            <option value="cm">cm</option>
+                                            <option value="mm">mm</option>
+                                            <option value="in">in</option>
+                                            <option value="pc">pc</option>
+                                        </optgroup>
+                                        <optgroup label="RELATIVE LENGTHS">
+                                            <option value="%">%</option>
+                                            <option value="em">em</option>
+                                            <option value="ex">ex</option>
+                                            <option value="ch">ch</option>
+                                            <option value="rem">rem</option>
+                                            <option value="vw">vw</option>
+                                            <option value="vh">vh</option>
+                                            <option value="vmin">vmin</option>
+                                            <option value="vmax">vmax</option>
+                                        </optgroup>
+                                    </select></li>
+                                <li style="font-size: 12px;margin-top: 1%;">L:&nbsp;<input type="number" id="padding_left_in" class="layout-opt" style="width: 56.6px;margin-top: 3%;font-size: 12px;" data-css="padding-left" data-unit="padding_unit" data-key="padding-left" data-value="self">&nbsp; &nbsp; R:<input type="number" id="padding_right_in" class="layout-opt" style="width: 56.6px;margin-top: 3%;font-size: 11px;" data-css="padding-right" data-unit="padding_unit" data-key="padding-right" data-value="self"></li>
+                                <li style="font-size: 12px;margin-top: 3%;">T:&nbsp;<input type="number" id="padding_top_in" class="layout-opt" style="width: 56.6px;font-size: 11px;" data-css="padding-top" data-key="padding-top" data-value="self" data-unit="padding_unit">&nbsp; &nbsp; B:<input type="number" id="padding_bottom_in" class="layout-opt" style="width: 56.6px;font-size: 11px;" data-css="padding-bottom" data-key="padding-bottom" data-value="self" data-unit="padding_unit"></li>
+                            </ul>
+                            <ul class="list-unstyled d-flex flex-column justify-content-center align-items-center">
+                                <li style="text-align: center;font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);margin-top: 0%;border-style: outset;background: #5b5b5b;color: rgb(255,255,255);width: 100%;">Margin:<br></li>
+                                <li class="text-truncate" style="text-shadow: -2px 3px 3px rgb(0,0,0);margin-top: 3%;padding-top: 2px;font-size: 13px;color: rgb(0,0,0);">&nbsp;<input type="number" id="margin_in" class="layout-opt" style="width: 83.6px;font-size: 12px;" data-key="margin" data-value="self" data-unit="margin_unit"><select id="margin_unit" style="width: 42.2px;font-size: 10px;height: 14px;">
+                                        <optgroup label="ABSOLUTE LENGTHS">
+                                            <option value="px" selected="">px</option>
+                                            <option value="cm">cm</option>
+                                            <option value="mm">mm</option>
+                                            <option value="in">in</option>
+                                            <option value="pc">pc</option>
+                                        </optgroup>
+                                        <optgroup label="RELATIVE LENGTHS">
+                                            <option value="%">%</option>
+                                            <option value="em">em</option>
+                                            <option value="ex">ex</option>
+                                            <option value="ch">ch</option>
+                                            <option value="rem">rem</option>
+                                            <option value="vw">vw</option>
+                                            <option value="vh">vh</option>
+                                            <option value="vmin">vmin</option>
+                                            <option value="vmax">vmax</option>
+                                        </optgroup>
+                                    </select></li>
+                                <li style="font-size: 12px;margin-top: 1%;color: rgb(0,0,0);">L:&nbsp;<input type="number" id="margin_left_in" class="layout-opt" style="width: 56.6px;margin-top: 3%;font-size: 12px;height: 24.8px;" data-css="margin-left" data-value="self" data-unit="margin_unit" data-key="margin-left">&nbsp; &nbsp; R:<input type="number" id="margin_right_in" class="layout-opt" style="width: 56.6px;margin-top: 3%;" data-css="margin-right" data-value="self" data-unit="margin_unit" data-key="margin-right"></li>
+                                <li style="font-size: 12px;margin-top: 3%;">T:&nbsp;<input type="number" id="margin_top_in" class="layout-opt" style="width: 56.6px;" data-css="margin-top" data-key="margin-top" data-value="self" data-unit="margin_unit">&nbsp; &nbsp; B:<input type="number" id="margin_bottom_in" class="layout-opt" style="width: 56.6px;" data-css="margin-bottom" data-key="margin-bottom" data-value="self" data-unit="margin_unit"></li>
+                            </ul>
+                            <ul class="list-unstyled d-flex flex-column justify-content-center align-items-center">
+                                <li style="text-align: center;font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);margin-top: 0%;border-style: outset;background: #5b5b5b;color: rgb(255,255,255);width: 100%;">Display:<br></li>
+                                <li style="margin-top: 6px;margin-bottom: 0px;"><select id="display_in" class="layout-opt" data-key="display" data-value="self">
+                                        <option value="default" selected="">Default</option>
+                                        <option value="none">None</option>
+                                        <option value="block">Block</option>
+                                        <option value="inline">Inline</option>
+                                        <option value="inline-block">Inline-Block</option>
+                                        <option value="grid">Grid</option>
+                                        <option value="table">Table</option>
+                                        <option value="table-cell">Table-Cell</option>
+                                        <option value="table-row">Table-Row</option>
+                                        <option value="flex">Flex</option>
+                                        <option value="inline-flex">Inline-Flex</option>
+                                    </select></li>
+                            </ul>
+                            <ul class="list-unstyled d-flex flex-column justify-content-center align-items-center">
+                                <li style="text-align: center;font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);margin-top: 0%;border-style: outset;background: #5b5b5b;color: rgb(255,255,255);width: 100%;">Float:<br></li>
+                                <li style="margin-top: 12px;color: rgb(0,0,0);">Float:&nbsp;<select id="float_in" class="layout-opt">
+                                        <option value="none">None</option>
+                                        <option value="left">Left</option>
+                                        <option value="right">Right</option>
+                                        <option value="inherit">Inherit</option>
+                                    </select></li>
+                                <li style="margin-top: 13px;color: rgb(0,0,0);">Clear:&nbsp;<select id="clear_in" class="layout-opt">
+                                        <option value="none">None</option>
+                                        <option value="left">Left</option>
+                                        <option value="right">Right</option>
+                                        <option value="both">Both</option>
+                                        <option value="inherit">Inherit</option>
+                                    </select></li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane ele_opts" role="tabpanel" id="bg_opts" style="padding-left: 0px;padding-right: 0px;padding-top: 0px;height: 100%;min-height: 100%;max-height: 100%;text-align: center;background: #e8e8e8;">
+                            <ul class="list-unstyled" style="color: rgb(255,255,255);margin-left: 5px;margin-top: 5px;margin-right: 5px;">
+                                <li>
+                                    <div style="text-align: center;margin-top: 7%;"><a class="btn btn-primary d-flex justify-content-center align-items-center" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-7" href="#collapse-7" role="button" style="margin: 0px;text-shadow: -3px 2px 3px rgb(0,0,0);font-size: 16px;width: 100%;height: 28.8px;background: rgb(91,91,91);color: rgb(255,255,255);">Color&nbsp;<i class="fa fa-caret-down"></i></a>
+                                        <div class="collapse" id="collapse-7" style="margin-top: 0%;">
+                                            <div>
+                                                <p class="d-flex justify-content-center align-items-center" style="color: rgb(0,0,0);margin-top: 5%;"><input type="text" id="bg_color_txt_in" style="width: 75%;text-align: center;" value="255, 255, 255" data-shared="bg_color_in" data-key="background-color" data-value="self"><input type="color" id="bg_color_in" class="bg-opt" style="margin-top: 0%;" data-value="self" data-key="background-color" data-shared="bg_color_txt_in"></p>
+                                            </div>
+                                            <div style="text-align: center;border-style: groove;">
+                                                <p style="text-shadow: -2px 3px 2px rgb(0,0,0);font-size: 16px;background: linear-gradient(rgb(149,114,224) 0%, rgb(22,104,35));border-radius: 9px;margin-bottom: 0px;height: 28px;">Gradient:&nbsp;&nbsp;</p>
+                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 2%;font-size: 13px;margin-bottom: 0px;color: rgb(0,0,0);">Color 1:&nbsp;<input type="color" class="bg-opt" style="margin-top: 0%;"></p>
+                                                <p class="d-flex justify-content-center align-items-center" style="margin-top: 4%;font-size: 13px;margin-bottom: 0px;color: rgb(0,0,0);">Color 2:&nbsp;<input type="color" class="bg-opt" style="margin-top: 0%;" value="#ffffff"></p>
+                                                <div style="text-align: center;width: 100%;margin-top: 20px;margin-bottom: 12px;"><button class="btn" id="add_grad_color_stop" type="button" style="background: rgb(36,100,195);color: rgb(255,255,255);border-style: outset;border-color: #ffffff;font-size: 13px;width: 132.6px;padding: 0px;">+ Add color stop<br></button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="margin-top: 7%;">
+                                    <div style="text-align: center;margin-top: 12%;"><a class="btn btn-primary d-flex justify-content-center align-items-center" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-8" href="#collapse-8" role="button" style="margin-top: 0px;text-shadow: -3px 3px 3px rgb(0,0,0);font-size: 16px;width: 100%;background: rgb(91,91,91);color: rgb(255,247,247);height: 28.8px;">Image&nbsp;<i class="fa fa-caret-down"></i></a>
+                                        <div class="collapse" id="collapse-8" style="margin-top: 8px;font-size: 10px;padding: 7px;border-style: groove;color: rgb(0,0,0);"><input type="file" id="bg_img_in" class="bg-opt" style="width: 100%;border: 1px solid rgb(255,251,251);font-size: 14px;">
+                                            <ul class="list-unstyled" id="bg_img_opts" style="margin-top: 13px;font-size: 12px;">
+                                                <li class="d-flex justify-content-around" style="font-size: 11px;width: 100%;"><span>Position:</span><select class="bg-opt" style="width: 57.6px;font-size: 11px;">
+                                                        <option value="left">Left</option>
+                                                        <option value="right">Right</option>
+                                                        <option value="center">Center</option>
+                                                    </select><select class="bg-opt" style="width: 57.6px;font-size: 11px;">
+                                                        <option value="top">Top</option>
+                                                        <option value="bottom">Bottom</option>
+                                                        <option value="center">Center</option>
+                                                    </select>&nbsp;</li>
+                                                <li class="d-flex justify-content-around" style="font-size: 11px;width: 100%;"><span>Size:</span>&nbsp;<select class="bg-opt" style="font-size: 11px;">
+                                                        <option value="auto">Auto</option>
+                                                        <option value="contain">Contain</option>
+                                                        <option value="cover">Cover</option>
+                                                        <option value="initial">Initial</option>
+                                                        <option value="inherit">Inherit</option>
+                                                    </select></li>
+                                                <li class="d-flex justify-content-around" style="font-size: 11px;width: 100%;"><span>Repeat:</span>&nbsp;<select class="bg-opt" style="font-size: 11px;">
+                                                        <option value="no-repeat" selected="">No-repeat</option>
+                                                        <option value="repeat">repeat</option>
+                                                    </select></li>
+                                                <li class="d-flex justify-content-around" style="font-size: 11px;width: 100%;"><span>Attachment:</span>&nbsp;<select class="bg-opt">
+                                                        <option value="fixed" selected="">Fixed</option>
+                                                        <option value="scroll">Scroll</option>
+                                                        <option value="local">Local</option>
+                                                        <option value="initial">Initial</option>
+                                                        <option value="inherit">Inherit</option>
+                                                    </select></li>
+                                            </ul>
+                                            <div style="border-style: outset;">
+                                                <div class="row photo_gal" style="width: 100%;margin: 0px;height: 50px;">
+                                                    <div class="col" style="width: 50%;padding: 0px;height: 100px;"></div>
+                                                    <div class="col" style="width: 50%;padding: 0px;height: 100px;"></div>
+                                                </div><label class="form-label" style="width: 100%;background: #5b5b5b;margin-top: 0px;">GALLERY</label>
+                                                <p id="img_gal_ph" style="opacity: 0.81;">Empty<br>Upload&nbsp; some photos to your <a href="#">Gallery</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane ele_opts" role="tabpanel" id="border_opts" style="padding-left: 0px;padding-right: 0px;padding-top: 0px;height: 100%;min-height: 100%;max-height: 100%;background: #e8e8e8;">
+                            <ul class="list-unstyled d-flex d-flex flex-column justify-content-center align-items-center" style="padding-left: 5px;padding-right: 5px;padding-top: 0px;color: rgb(255,255,255);width: 100%;height: 50%;">
+                                <li style="text-align: center;font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);margin-top: 0%;border-style: outset;background: #5b5b5b;color: rgb(255,255,255);width: 100%;height: 29.8px;">Style:<br></li>
+                                <li class="d-flex justify-content-between justify-content-center align-items-center" style="font-size: 15px;text-shadow: -2px 3px 2px rgb(0,0,0);padding: 2px;text-align: center;width: 100%;border-style: groove;border-bottom-style: none;"><select id="border_style_in" class="border-opt" style="font-size: 15px;text-align: center;" data-css="border-style">
+                                        <option value="none" selected="">None</option>
+                                        <option value="default">Default</option>
+                                        <option value="solid">Solid</option>
+                                        <option value="double">Double</option>
+                                        <option value="ridge">Ridge</option>
+                                        <option value="groove">Groove</option>
+                                        <option value="inset">Inset</option>
+                                        <option value="outset">Outset</option>
+                                        <option value="initial">Initial</option>
+                                        <option value="inherit">Inherit</option>
+                                    </select><span></span><span></span></li>
+                                <li style="text-align: center;font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);margin-top: 8%;border-style: outset;background: #5b5b5b;color: rgb(255,255,255);width: 100%;height: 29.8px;">Color:<br></li>
+                                <li class="d-flex justify-content-between justify-content-center align-items-center" style="font-size: 15px;text-shadow: -2px 3px 2px rgb(0,0,0);padding: 2px;text-align: center;width: 100%;border-style: groove;border-top-style: none;border-bottom-style: none;height: 13%;"><input type="text" id="border_color_txt_in" style="width: 75%;" data-key="border-color" data-value="self" data-shared="border_color_in" value="255, 255, 255"><input type="color" id="border_color_in" class="border-opt" data-key="border-color" style="font-size: 19px;text-align: center;height: 100%;" data-value="self" data-shared="border_color_txt_in"><span></span><span></span></li>
+                                <li style="text-align: center;font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);margin-top: 8%;border-style: outset;background: #5b5b5b;color: rgb(255,255,255);width: 100%;height: 29.8px;">Width:<br></li>
+                                <li class="d-flex justify-content-between justify-content-center align-items-center" style="font-size: 15px;text-shadow: -2px 3px 2px rgb(0,0,0);padding: 2px;text-align: center;width: 100%;border-style: groove;border-top-style: none;border-bottom-style: none;"><span><input type="number" id="border_size_in" class="border-opt" style="width: 55px;font-size: 15px;text-align: center;" data-key="border-width" data-value="self" data-unit="border_unit"><select id="border_unit" class="unit-opt" style="width: 45.2px;font-size: 15px;text-align: center;" data-unitfor="border-width">
+                                            <optgroup label="ABSOLUTE LENGTHS">
+                                                <option value="px" selected="">px</option>
+                                                <option value="cm">cm</option>
+                                                <option value="mm">mm</option>
+                                                <option value="in">in</option>
+                                                <option value="pc">pc</option>
+                                            </optgroup>
+                                            <optgroup label="RELATIVE LENGTHS">
+                                                <option value="%">%</option>
+                                                <option value="em">em</option>
+                                                <option value="ex">ex</option>
+                                                <option value="ch">ch</option>
+                                                <option value="rem">rem</option>
+                                                <option value="vw">vw</option>
+                                                <option value="vh">vh</option>
+                                                <option value="vmin">vmin</option>
+                                                <option value="vmax">vmax</option>
+                                            </optgroup>
+                                        </select></span>&nbsp;</li>
+                                <li style="text-align: center;font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);margin-top: 8%;border-style: outset;background: #5b5b5b;color: rgb(255,255,255);width: 100%;height: 29.8px;">Radius:<br></li>
+                                <li class="d-flex justify-content-between justify-content-center align-items-center" style="font-size: 15px;text-shadow: -2px 3px 2px rgb(0,0,0);padding: 2px;text-align: center;width: 100%;border-style: groove;border-top-style: none;"><span><input type="number" id="border_radius_in" class="border-opt" style="width: 55px;font-size: 14px;" data-key="border-radius" data-value="self" data-unit="border_radius_unit"><select id="border_radius_unit" class="unit-opt" style="width: 41.2px;font-size: 13px;" data-for="border-radius">
+                                            <optgroup label="ABSOLUTE LENGTHS">
+                                                <option value="px" selected="">px</option>
+                                                <option value="cm">cm</option>
+                                                <option value="mm">mm</option>
+                                                <option value="in">in</option>
+                                                <option value="pc">pc</option>
+                                            </optgroup>
+                                            <optgroup label="RELATIVE LENGTHS">
+                                                <option value="%">%</option>
+                                                <option value="em">em</option>
+                                                <option value="ex">ex</option>
+                                                <option value="ch">ch</option>
+                                                <option value="rem">rem</option>
+                                                <option value="vw">vw</option>
+                                                <option value="vh">vh</option>
+                                                <option value="vmin">vmin</option>
+                                                <option value="vmax">vmax</option>
+                                            </optgroup>
+                                        </select></span>&nbsp;</li>
+                            </ul>
+                            <div class="text-center"><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-9" href="#collapse-9" role="button" style="background: #5b5b5b;padding-bottom: 0px;padding-top: 0px;color: rgb(255,255,255);text-shadow: -2px 3px 2px rgb(0,0,0);">Image<i class="fa fa-caret-right" id="bd_img_caret_right" style="margin-left: 5px;"></i><i class="fa fa-caret-down" id="bd_img_caret_down" style="margin-left: 5px;display:none;"></i></a>
+                                <div class="collapse" id="collapse-9" style="color: rgb(0,0,0);">
+                                    <ul class="list-unstyled" style="text-align: center;border-style: groove;padding-bottom: 0px;padding-left: 0px;padding-right: 0px;">
+                                        <li class="d-flex justify-content-between" style="font-size: 24px;text-shadow: -2px 3px 2px rgb(0,0,0);padding: 2px;"></li>
+                                        <li class="d-flex justify-content-between" style="width: 100%;"><input type="file" id="border_img_in" class="border-opt" style="background: #ffffff;width: 100%;margin-left: 3px;" data-css="border-image-source"></li>
+                                        <li class="d-flex justify-content-evenly justify-content-center align-items-center" style="padding-top: 0px;margin-top: 1%;">Slice (%):&nbsp; <input type="number" id="border_img_slice_in" class="border-opt" style="width: 34%;margin-top: 1%;" data-css="border-image-slice"></li>
+                                        <li class="d-flex justify-content-evenly justify-content-center align-items-center" style="padding-top: 0px;margin-top: 1%;">Width:&nbsp; <input type="number" id="border_img_width_in" class="border-opt" style="width: 23%;margin-top: 1%;" data-css="border-image-width"><select id="border_img_width_unit" class="unit-opt" style="width: 42.2px;margin-top: 1%;" data-for="border-image-width">
+                                                <optgroup label="ABSOLUTE LENGTHS">
+                                                    <option value="px" selected="">px</option>
+                                                    <option value="cm">cm</option>
+                                                    <option value="mm">mm</option>
+                                                    <option value="in">in</option>
+                                                    <option value="pc">pc</option>
+                                                </optgroup>
+                                                <optgroup label="RELATIVE LENGTHS">
+                                                    <option value="%">%</option>
+                                                    <option value="em">em</option>
+                                                    <option value="ex">ex</option>
+                                                    <option value="ch">ch</option>
+                                                    <option value="rem">rem</option>
+                                                    <option value="vw">vw</option>
+                                                    <option value="vh">vh</option>
+                                                    <option value="vmin">vmin</option>
+                                                    <option value="vmax">vmax</option>
+                                                </optgroup>
+                                            </select></li>
+                                        <li class="d-flex justify-content-evenly justify-content-center align-items-center" style="padding-top: 0px;margin-top: 1%;">Outset:&nbsp; <input type="number" id="border_img_outset_in" class="border-opt" style="width: 23%;margin-top: 1%;" data="border-image-outset"><select id="border_img_outset_unit" class="unit-opt" style="width: 42.2px;margin-top: 1%;" data-for="border-image-outset">
+                                                <optgroup label="ABSOLUTE LENGTHS">
+                                                    <option value="px" selected="">px</option>
+                                                    <option value="cm">cm</option>
+                                                    <option value="mm">mm</option>
+                                                    <option value="in">in</option>
+                                                    <option value="pc">pc</option>
+                                                </optgroup>
+                                                <optgroup label="RELATIVE LENGTHS">
+                                                    <option value="%">%</option>
+                                                    <option value="em">em</option>
+                                                    <option value="ex">ex</option>
+                                                    <option value="ch">ch</option>
+                                                    <option value="rem">rem</option>
+                                                    <option value="vw">vw</option>
+                                                    <option value="vh">vh</option>
+                                                    <option value="vmin">vmin</option>
+                                                    <option value="vmax">vmax</option>
+                                                </optgroup>
+                                            </select></li>
+                                        <li class="d-flex justify-content-evenly justify-content-center align-items-center" style="padding-top: 0px;margin-top: 1%;">Repeat:&nbsp; <select id="border_img_repeat_in" class="border-opt" style="margin-top: 1%;" data-css="border-image-repeat">
+                                                <option value="no_repeat" selected="">No Repeat</option>
+                                                <option value="repeat">Repeat</option>
+                                            </select></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane ele_opts" role="tabpanel" id="shadows_opts" style="padding-left: 0px;padding-right: 0px;padding-top: 0px;height: 100%;min-height: 100%;max-height: 100%;background: #e8e8e8;">
+                            <ul class="list-unstyled" style="text-align: center;padding-bottom: 12px;margin-bottom: 0px;border-style: groove;border-bottom-style: groove;color: rgb(11,11,11);">
+                                <li style="font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);background: #5b5b5b;border-style: outset;color: rgb(255,255,255);">Text Shadow:</li>
+                                <li style="font-size: 14px;margin-top: 4px;">Color:&nbsp;<input type="color" id="text_shadow_color_in" class="shadow-opt" data-group="text_shadow_x_in, text_shadow_y_in, text_shadow_blur_in" data-key="text-shadow" data-value="self" data-index="3"></li>
+                                <li style="margin-top: 10px;font-size: 12px;">X:&nbsp;<input type="number" id="text_shadow_x_in" class="shadow-opt" style="width: 65.4px;" data-key="text-shadow" data-group="text_shadow_y_in, text_shadow_blur_in, text_shadow_color_in" data-value="self" data-index="0" data-unit="text_shadow_x_unit"><select id="text_shadow_x_unit" class="unit-opt" style="width: 38.2px;margin-left: 5px;" data-unitfor="text-shadowX">
+                                        <optgroup label="ABSOLUTE LENGTHS">
+                                            <option value="px" selected="">px</option>
+                                            <option value="cm">cm</option>
+                                            <option value="mm">mm</option>
+                                            <option value="in">in</option>
+                                            <option value="pc">pc</option>
+                                        </optgroup>
+                                        <optgroup label="RELATIVE LENGTHS">
+                                            <option value="%">%</option>
+                                            <option value="em">em</option>
+                                            <option value="ex">ex</option>
+                                            <option value="ch">ch</option>
+                                            <option value="rem">rem</option>
+                                            <option value="vw">vw</option>
+                                            <option value="vh">vh</option>
+                                            <option value="vmin">vmin</option>
+                                            <option value="vmax">vmax</option>
+                                        </optgroup>
+                                    </select></li>
+                                <li style="margin-top: 10px;box-shadow: 0px 0px;font-size: 12px;">Y:&nbsp;<input type="number" id="text_shadow_y_in" class="shadow-opt" style="width: 65.4px;" data-group="text_shadow_x_in, text_shadow_blur_in, text_shadow_color_in" data-index="1" data-key="text-shadow" data-value="self" data-unit="text_shadow_y_unit"><select id="text_shadow_y_unit" class="unit-opt" style="width: 38.2px;margin-left: 5px;" data-unitfor="text-shadowY">
+                                        <optgroup label="ABSOLUTE LENGTHS">
+                                            <option value="px" selected="">px</option>
+                                            <option value="cm">cm</option>
+                                            <option value="mm">mm</option>
+                                            <option value="in">in</option>
+                                            <option value="pc">pc</option>
+                                        </optgroup>
+                                        <optgroup label="RELATIVE LENGTHS">
+                                            <option value="%">%</option>
+                                            <option value="em">em</option>
+                                            <option value="ex">ex</option>
+                                            <option value="ch">ch</option>
+                                            <option value="rem">rem</option>
+                                            <option value="vw">vw</option>
+                                            <option value="vh">vh</option>
+                                            <option value="vmin">vmin</option>
+                                            <option value="vmax">vmax</option>
+                                        </optgroup>
+                                    </select></li>
+                                <li style="margin-top: 10px;font-size: 12px;">Blur:<input type="number" id="text_shadow_blur_in" class="shadow-opt" style="width: 65.4px;" data-key="text-shadow" data-index="2" data-value="self" data-group="text_shadow_x_in, text_shadow_y_in, text_shadow_color_in" data-unit="text_shadow_blur_unit">&nbsp;<select id="text_shadow_blur_unit" class="unit-opt" style="width: 38.2px;margin-left: 5px;" data-unitfor="text-shadow-blur">
+                                        <optgroup label="ABSOLUTE LENGTHS">
+                                            <option value="px" selected="">px</option>
+                                            <option value="cm">cm</option>
+                                            <option value="mm">mm</option>
+                                            <option value="in">in</option>
+                                            <option value="pc">pc</option>
+                                        </optgroup>
+                                        <optgroup label="RELATIVE LENGTHS">
+                                            <option value="%">%</option>
+                                            <option value="em">em</option>
+                                            <option value="ex">ex</option>
+                                            <option value="ch">ch</option>
+                                            <option value="rem">rem</option>
+                                            <option value="vw">vw</option>
+                                            <option value="vh">vh</option>
+                                            <option value="vmin">vmin</option>
+                                            <option value="vmax">vmax</option>
+                                        </optgroup>
+                                    </select>&nbsp;</li>
+                            </ul>
+                            <ul class="list-unstyled" style="text-align: center;padding-bottom: 12px;margin-bottom: 0px;border-style: groove;border-bottom-style: groove;color: rgb(11,11,11);">
+                                <li style="font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);background: #5b5b5b;border-style: outset;color: rgb(255,255,255);">Box Shadow:</li>
+                                <li style="font-size: 14px;">Inset:&nbsp;<i class="fa fa-toggle-off shadow-opt" id="bs_inset" style="font-size: 26px;"></i>&nbsp;</li>
+                                <li style="font-size: 14px;margin-top: 4px;">Color:&nbsp;<input type="color" id="box_shadow_color_in" class="shadow-opt" data-group="box_shadow_x_in, box_shadow_y_in, box_shadow_blur_in, box_shadow_spread_in" data-key="box-shadow" data-value="self" data-index="3"></li>
+                                <li style="margin-top: 10px;font-size: 12px;">X:&nbsp;<input type="number" id="box_shadow_x_in" class="shadow-opt" style="width: 65.4px;" data-key="box-shadow" data-group="box_shadow_y_in, box_shadow_blur_in, box_shadow_color_in, box_spread_color_in" data-value="self" data-index="0" data-unit="box_shadow_x_unit"><select id="box_shadow_x_unit" class="unit-opt" style="width: 38.2px;margin-left: 5px;" data-unitfor="box-shadowX">
+                                        <optgroup label="ABSOLUTE LENGTHS">
+                                            <option value="px" selected="">px</option>
+                                            <option value="cm">cm</option>
+                                            <option value="mm">mm</option>
+                                            <option value="in">in</option>
+                                            <option value="pc">pc</option>
+                                        </optgroup>
+                                        <optgroup label="RELATIVE LENGTHS">
+                                            <option value="%">%</option>
+                                            <option value="em">em</option>
+                                            <option value="ex">ex</option>
+                                            <option value="ch">ch</option>
+                                            <option value="rem">rem</option>
+                                            <option value="vw">vw</option>
+                                            <option value="vh">vh</option>
+                                            <option value="vmin">vmin</option>
+                                            <option value="vmax">vmax</option>
+                                        </optgroup>
+                                    </select></li>
+                                <li style="margin-top: 10px;box-shadow: 0px 0px;font-size: 12px;">Y:&nbsp;<input type="number" id="box_shadow_y_in" class="shadow-opt" style="width: 65.4px;" data-group="box_shadow_x_in, box_shadow_blur_in, box_shadow_color_in, box_spread_color_in" data-index="1" data-key="box-shadow" data-value="self" data-unit="box_shadow_y_unit"><select id="box_shadow_y_unit" class="unit-opt" style="width: 38.2px;margin-left: 5px;" data-unitfor="box-shadowY">
+                                        <optgroup label="ABSOLUTE LENGTHS">
+                                            <option value="px" selected="">px</option>
+                                            <option value="cm">cm</option>
+                                            <option value="mm">mm</option>
+                                            <option value="in">in</option>
+                                            <option value="pc">pc</option>
+                                        </optgroup>
+                                        <optgroup label="RELATIVE LENGTHS">
+                                            <option value="%">%</option>
+                                            <option value="em">em</option>
+                                            <option value="ex">ex</option>
+                                            <option value="ch">ch</option>
+                                            <option value="rem">rem</option>
+                                            <option value="vw">vw</option>
+                                            <option value="vh">vh</option>
+                                            <option value="vmin">vmin</option>
+                                            <option value="vmax">vmax</option>
+                                        </optgroup>
+                                    </select></li>
+                                <li style="margin-top: 10px;font-size: 12px;">Blur:&nbsp;<input type="number" id="box_shadow_blur_in" class="shadow-opt" style="width: 65.4px;" data-key="box-shadow" data-index="2" data-value="self" data-group="box_shadow_x_in, box_shadow_y_in, box_shadow_blur_in, box_shadow_spread_in" data-unit="box_shadow_blur_unit">&nbsp;<select id="box_shadow_blur_unit" class="unit-opt" style="width: 38.2px;margin-left: 5px;" data-unitfor="box-shadow-blur">
+                                        <optgroup label="ABSOLUTE LENGTHS">
+                                            <option value="px" selected="">px</option>
+                                            <option value="cm">cm</option>
+                                            <option value="mm">mm</option>
+                                            <option value="in">in</option>
+                                            <option value="pc">pc</option>
+                                        </optgroup>
+                                        <optgroup label="RELATIVE LENGTHS">
+                                            <option value="%">%</option>
+                                            <option value="em">em</option>
+                                            <option value="ex">ex</option>
+                                            <option value="ch">ch</option>
+                                            <option value="rem">rem</option>
+                                            <option value="vw">vw</option>
+                                            <option value="vh">vh</option>
+                                            <option value="vmin">vmin</option>
+                                            <option value="vmax">vmax</option>
+                                        </optgroup>
+                                    </select>&nbsp;</li>
+                                <li style="margin-top: 10px;">Spread:&nbsp;<input type="number" id="box_shadow_spread_in" class="shadow-opt" style="width: 65.4px;" data-index="4" data-key="box-shadow" data-group="box_shadow_x_in, box_shadow_y_in, box_shadow_blur_in, box_shadow_color_in" data-value="self" data-unit="box_shadow_spread_unit"><select id="box_shadow_spread_unit" class="unit-opt" style="width: 38.2px;margin-left: 5px;" data-unitfor="box-shadow-spread">
+                                        <optgroup label="ABSOLUTE LENGTHS">
+                                            <option value="px" selected="">px</option>
+                                            <option value="cm">cm</option>
+                                            <option value="mm">mm</option>
+                                            <option value="in">in</option>
+                                            <option value="pc">pc</option>
+                                        </optgroup>
+                                        <optgroup label="RELATIVE LENGTHS">
+                                            <option value="%">%</option>
+                                            <option value="em">em</option>
+                                            <option value="ex">ex</option>
+                                            <option value="ch">ch</option>
+                                            <option value="rem">rem</option>
+                                            <option value="vw">vw</option>
+                                            <option value="vh">vh</option>
+                                            <option value="vmin">vmin</option>
+                                            <option value="vmax">vmax</option>
+                                        </optgroup>
+                                    </select>&nbsp;</li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane ele_opts" role="tabpanel" id="filters_opts" style="padding-left: 0px;padding-right: 0px;padding-top: 0px;height: 100%;min-height: 100%;max-height: 100%;background: #e8e8e8;">
+                            <ul class="list-unstyled" style="margin-bottom: 0;margin-top: 1%;background: #ffffff;">
+                                <li style="font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);background: #5b5b5b;border-style: outset;color: rgb(255,255,255);text-align: center;">Opacity:</li>
+                                <li style="text-align: center;font-size: 14px;text-shadow: 0px 0px #ffffff;margin-top: 1%;color: #000000;"><input type="text" id="opacity_out" class="filter-opt" readonly="" style="width: 20%;font-size: 14px;filter: brightness(100%);padding: 0;" value="1.0">&nbsp;</li>
+                                <li style="text-align: center;height: 25px;margin-top: 1%;font-size: 14px;text-shadow: 0px 0px #ffffff;color: #000000;"><input class="form-range filter-opt" type="range" id="opacity_range_in" value="0" style="width: 90%;margin-right: 0px;margin-left: 0px;"></li>
+                                <li style="font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);background: #5b5b5b;border-style: outset;color: rgb(255,255,255);text-align: center;">Blur:</li>
+                                <li style="margin-top: 1%;text-align: center;font-size: 14px;text-shadow: 0px 0px #ffffff;color: #000000;"><input type="text" id="blur_out" class="filter-opt" readonly="" style="width: 20%;font-size: 14px;filter: brightness(100%);padding: 0;" value="0px"></li>
+                                <li style="text-align: center;height: 25px;margin-top: 1%;font-size: 14px;text-shadow: 0px 0px #ffffff;color: #000000;"><input class="form-range filter-opt" type="range" id="blur_range_in" value="0" style="width: 90%;margin-right: 0px;margin-left: 0px;"></li>
+                                <li style="font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);background: #5b5b5b;border-style: outset;color: rgb(255,255,255);text-align: center;">Brightness:</li>
+                                <li style="margin-top: 1%;text-align: center;font-size: 14px;text-shadow: 0px 0px #ffffff;color: #000000;"><input type="text" id="brightness_out" class="filter-opt" readonly="" style="width: 60.4px;font-size: 14px;filter: brightness(100%);padding: 0;" value="100%"></li>
+                                <li style="margin-top: 1%;text-align: center;font-size: 14px;text-shadow: 0px 0px #ffffff;height: 25px;color: #000000;"><input class="form-range filter-opt" type="range" id="brightness_range_in" style="width: 90%;margin-right: 0px;"></li>
+                                <li style="font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);background: #5b5b5b;border-style: outset;color: rgb(255,255,255);text-align: center;">Contrast:</li>
+                                <li style="margin-top: 1%;text-align: center;font-size: 14px;text-shadow: 0px 0px #ffffff;color: #000000;"><input type="text" id="constrast_out" class="filter-opt" readonly="" style="width: 60.4px;font-size: 14px;filter: brightness(100%);padding: 0;" value="100%"></li>
+                                <li style="margin-top: 1%;text-align: center;font-size: 14px;text-shadow: 0px 0px #ffffff;height: 25px;color: #000000;"><input class="form-range filter-opt" type="range" id="constrast_range_in" style="width: 90%;margin-right: 0px;"></li>
+                                <li style="font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);background: #5b5b5b;border-style: outset;color: rgb(255,255,255);text-align: center;">Greyscale:</li>
+                                <li style="margin-top: 1%;text-align: center;font-size: 14px;text-shadow: 0px 0px #ffffff;color: #000000;"><input type="text" id="greyscale_out" class="filter-opt" readonly="" style="width: 60.4px;font-size: 14px;filter: brightness(100%) hue-rotate(0deg);padding: 0;" value="0%"></li>
+                                <li style="margin-top: 1%;text-align: center;font-size: 14px;text-shadow: 0px 0px #ffffff;height: 25px;color: #000000;"><input class="form-range filter-opt" type="range" id="greyscale_range_in" style="width: 90%;margin-right: 0px;" value="0"></li>
+                                <li style="font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);background: #5b5b5b;border-style: outset;color: rgb(255,255,255);text-align: center;">Hue:</li>
+                                <li style="margin-top: 1%;text-align: center;font-size: 14px;text-shadow: 0px 0px #ffffff;color: #000000;"><input type="text" id="hue_out" class="filters" readonly="" style="width: 60.4px;font-size: 14px;filter: brightness(100%) hue-rotate(0deg) invert(0%);margin-right: 0px;padding: 0;" value="0deq">&nbsp;</li>
+                                <li style="text-align: center;height: 25px;margin-top: 1%;font-size: 14px;text-shadow: 0px 0px #ffffff;color: #000000;"><input class="form-range filter-opt" type="range" id="hue_range_in" style="width: 90%;margin-right: 0px;" value="0"></li>
+                                <li style="font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);background: #5b5b5b;border-style: outset;color: rgb(255,255,255);text-align: center;">Invert:</li>
+                                <li style="margin-top: 1%;text-align: center;font-size: 14px;text-shadow: 0px 0px #ffffff;color: #000000;"><input type="text" id="invert_out" class="filter-opt" readonly="" style="width: 60.4px;font-size: 14px;filter: brightness(100%) hue-rotate(0deg);padding: 0;" value="0%">&nbsp;</li>
+                                <li style="text-align: center;height: 25px;margin-top: 1%;font-size: 14px;text-shadow: 0px 0px #ffffff;color: #000000;"><input class="form-range filter-opt" type="range" id="invert_range_in" style="width: 90%;margin-right: 0px;" value="0"></li>
+                                <li style="font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);background: #5b5b5b;border-style: outset;color: rgb(255,255,255);text-align: center;">Saturate:</li>
+                                <li style="margin-top: 1%;text-align: center;font-size: 14px;text-shadow: 0px 0px #ffffff;color: #000000;"><input type="text" id="saturate_out" class="filter-opt" readonly="" style="width: 60.4px;font-size: 14px;filter: brightness(100%);padding: 0;" value="100%"></li>
+                                <li style="text-align: center;font-size: 14px;text-shadow: 0px 0px #ffffff;height: 25px;margin-top: 1%;color: #000000;"><input class="form-range filters" type="range" id="saturate_range_in" style="width: 90%;filter: sepia(0%);margin-right: 0px;"></li>
+                                <li style="font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);background: #5b5b5b;border-style: outset;color: rgb(255,255,255);text-align: center;">Sepia:</li>
+                                <li style="margin-top: 1%;text-align: center;font-size: 14px;text-shadow: 0px 0px #ffffff;color: #000000;"><input type="text" id="sepia_out" class="filter-opt" readonly="" style="width: 60.4px;font-size: 14px;filter: brightness(100%) hue-rotate(0deg);padding: 0;" value="0%">&nbsp;</li>
+                                <li style="text-align: center;height: 25px;margin-top: 1%;font-size: 14px;text-shadow: 0px 0px #ffffff;color: #000000;"><input class="form-range filter-opt" type="range" id="sepia_range_in" style="width: 90%;margin-right: 0px;" value="0"></li>
+                                <li style="margin-top: 1%;text-shadow: 0px 0px #ffffff;color: #000000;"></li>
+                            </ul>
+                        </div>
+                        <div class="tab-pane ele_opts" role="tabpanel" id="transform_opts" style="padding: 0px;padding-left: 0px;padding-right: 0px;padding-top: 0px;height: 100%;min-height: 100%;max-height: 100%;text-align: center;background: #e8e8e8;">
+                            <ul class="list-unstyled" style="margin-top: 0px;">
+                                <li style="font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);background: #5b5b5b;border-style: outset;color: rgb(255,255,255);text-align: center;">Transform Origin:</li>
+                                <li style="font-size: 14px;margin-top: 1%;color: rgb(0,0,0);font-weight: bold;">X:&nbsp;<select id="transformx_in" class="transfom-opt" style="width: 128.6px;">
+                                        <option value="left" selected="">Left</option>
+                                        <option value="center">Center</option>
+                                        <option value="right">Right</option>
+                                        <option value="custom">Custom</option>
+                                        <option value="50%" selected="">50% (default)</option>
+                                    </select><input type="text" id="custom_transform_x_in" style="width: 94px;"></li>
+                                <li style="font-size: 14px;margin-top: 1%;font-weight: bold;color: rgb(0,0,0);">Y:&nbsp;&nbsp;<select id="transformy_in" class="transfom-opt" style="width: 128.6px;">
+                                        <option value="left" selected="">Left</option>
+                                        <option value="center">Center</option>
+                                        <option value="right">Right</option>
+                                        <option value="custom">Custom</option>
+                                        <option value="50%" selected="">50% (default)</option>
+                                    </select>&nbsp;<input type="text" id="custom_transform_y_in" style="width: 94px;"></li>
+                                <li style="font-size: 14px;margin-top: 1%;color: rgb(0,0,0);font-weight: bold;">Z:&nbsp;<select id="transformz_in" class="transfom-opt" style="width: 128.6px;">
+                                        <option value="left" selected="">Left</option>
+                                        <option value="center">Center</option>
+                                        <option value="right">Right</option>
+                                        <option value="custom">Custom</option>
+                                        <option value="0%" selected="">0% (default)</option>
+                                    </select>&nbsp;&nbsp;<input type="text" id="custom_transform_z_in" style="width: 94px;"></li>
+                                <li style="font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);background: #5b5b5b;border-style: outset;color: rgb(255,255,255);text-align: center;margin-top: 5px;">Transform Style:</li>
+                                <li style="text-shadow: -3px 2px 3px rgb(0,0,0);font-size: 14px;margin-top: 5px;"><select id="transform_style_in" class="transfom-opt">
+                                        <option value="flat" selected="">Flat (default)</option>
+                                        <option value="preserve_3d">Preserve-3d</option>
+                                        <option value="initial">Initial</option>
+                                        <option value="inherit">Inherit</option>
+                                    </select></li>
+                                <li style="font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);background: #5b5b5b;border-style: outset;color: rgb(255,255,255);text-align: center;margin-top: 5px;">Perspective:</li>
+                                <li style="text-align: center;font-size: 16px;text-shadow: -3px 2px 3px rgb(0,0,0);margin-top: 2%;"><input type="text" id="perspective_out" class="transfom-opt" readonly="" style="width: 20%;font-size: 16px;filter: brightness(100%);margin-left: 4%;" value="0px"><br></li>
+                                <li style="text-align: center;font-size: 16px;text-shadow: -3px 2px 3px rgb(0,0,0);"><input class="form-range transfom-opt" type="range" id="perspective_range_in" style="font-size: 16px;margin-top: 0px;width: 90%;color: rgb(242,242,242);" value="0"></li>
+                                <li style="font-size: 16px;text-shadow: -2px 3px 2px rgb(0,0,0);background: #5b5b5b;border-style: outset;color: rgb(255,255,255);text-align: center;margin-top: 5px;">Perspective Origin:</li>
+                                <li style="font-size: 14px;margin-top: 1%;font-weight: bold;color: rgb(0,0,0);">X:&nbsp;<select id="perspective_originx_out" class="transfom-opt" style="width: 128.6px;margin-top: 1%;">
+                                        <option value="left" selected="">Left</option>
+                                        <option value="center">Center</option>
+                                        <option value="right">Right</option>
+                                        <option value="custom">Custom</option>
+                                        <option value="50%" selected="">50% (default)</option>
+                                    </select><input type="text" id="custom_perspective_originx_out" style="width: 94px;margin-top: 1%;"></li>
+                                <li style="font-size: 14px;margin-top: 1%;color: rgb(0,0,0);font-weight: bold;">Y:&nbsp;<select id="perspective_originy_out" class="transfom-opt" style="width: 128.6px;">
+                                        <option value="left" selected="">Left</option>
+                                        <option value="center">Center</option>
+                                        <option value="right">Right</option>
+                                        <option value="custom">Custom</option>
+                                        <option value="50%" selected="">50% (default)</option>
+                                    </select><input type="text" id="custom_perspective_originy_out" style="width: 94px;"></li>
+                            </ul>
+                            <div style="margin-top: 10%;padding: 6px;"><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-10" href="#collapse-10" role="button" style="margin-top: 0%;background: rgb(91,91,91);width: 100%;font-size: 16px;text-shadow: -1px 3px 3px rgb(0,0,0);color: rgb(255,255,255);">2D&nbsp;<i class="fa fa-caret-right" style="font-size: 16px;"></i></a>
+                                <div class="collapse" id="collapse-10" style="font-size: 16px;">
+                                    <ul class="list-unstyled" style="margin-bottom: 0px;font-size: 16px;">
+                                        <li style="margin-top: 4%;text-align: center;font-size: 16px;color: rgb(0,0,0);"><strong>Translate</strong>:<input type="text" id="translate_out" class="transfom-opt" readonly="" style="width: 20%;font-size: 16px;filter: brightness(100%);margin-left: 4%;" value="0px"></li>
+                                        <li style="text-align: center;font-size: 16px;"><input class="form-range transfom-opt" type="range" id="translate_range_in" value="0" style="width: 90%;font-size: 16px;" min="-1000" max="1000"></li>
+                                        <li style="margin-top: 4%;text-align: center;font-size: 16px;color: rgb(0,0,0);"><strong>Rotate</strong>:&nbsp;&nbsp;<input type="text" id="rotate_out" class="transfom-opt" readonly="" style="width: 22%;font-size: 16px;filter: brightness(100%);" value="0deq"></li>
+                                        <li style="text-align: center;font-size: 16px;text-shadow: -3px 2px 3px rgb(0,0,0);"><input class="form-range transfom-opt" type="range" id="rotate_range_in" style="width: 90%;font-size: 16px;" value="0" min="-360" max="360"></li>
+                                        <li style="text-align: center;font-size: 16px;margin-top: 4%;color: rgb(0,0,0);"><strong>ScaleX</strong>:&nbsp;&nbsp;<input type="text" id="scalex_in" class="transfom-opt" readonly="" style="width: 20%;font-size: 16px;filter: brightness(100%);" value="1"></li>
+                                        <li style="text-align: center;font-size: 16px;margin-top: 1%;color: rgb(0,0,0);"><strong>ScaleY</strong>:&nbsp;&nbsp;<input type="text" id="scaley_in" class="transfom-opt" readonly="" style="width: 20%;font-size: 16px;filter: brightness(100%);" value="1"></li>
+                                        <li style="text-align: center;font-size: 16px;"></li>
+                                        <li style="text-align: center;font-size: 16px;margin-top: 11%;color: rgb(0,0,0);"><strong>SkewX</strong>:&nbsp;&nbsp;<input type="text" id="skewx_in" class="transfom-opt" readonly="" style="width: 20%;font-size: 16px;filter: brightness(100%);" value="1">&nbsp;&nbsp;</li>
+                                        <li style="text-align: center;font-size: 16px;margin-top: 1%;color: rgb(1,1,1);"><strong>SkewY</strong>:&nbsp;<input type="text" id="skewy_in" readonly="" style="width: 20%;font-size: 16px;filter: brightness(100%);" value="1">&nbsp;</li>
+                                        <li style="text-align: center;font-size: 16px;"></li>
+                                        <li style="text-align: center;font-size: 17px;text-shadow: -3px 2px 3px rgb(0,0,0);margin-top: 10%;padding-left: 41px;background: #5b5b5b;border-style: outset;border-bottom-style: none;">Matrix:<i class="fas fa-question" id="matrix_help" style="padding-left: 21px;"></i><br></li>
+                                        <li style="text-align: center;font-size: 17px;text-shadow: -3px 2px 3px rgb(0,0,0);margin-top: 0%;border-right-style: outset;border-left-style: outset;padding-top: 2%;"><input type="text" id="matrix_in" class="transfom-opt" style="height: 23.6px;width: 13%;font-size: 12px;border-right-style: outset;border-left-style: outset;text-align: center;" placeholder="a"><input type="text" id="matrix_in-2" class="transfom-opt" style="height: 23.6px;width: 13%;font-size: 12px;border-right-style: outset;border-left-style: outset;text-align: center;margin-right: 1%;margin-left: 1%;" placeholder="b"><input type="text" id="matrix_in-1" class="transfom-opt" style="height: 23.6px;width: 13%;font-size: 12px;border-right-style: outset;border-left-style: outset;text-align: center;" placeholder="c"><br></li>
+                                        <li style="text-align: center;font-size: 17px;text-shadow: -3px 2px 3px rgb(0,0,0);margin-top: 0%;border-right-style: outset;border-left-style: outset;padding-top: 2%;"><input type="text" id="matrix_in-3" class="transfom-opt" style="height: 23.6px;width: 13%;font-size: 12px;border-right-style: outset;border-left-style: outset;text-align: center;" placeholder="d"><input type="text" id="matrix_in-4" class="transfom-opt" style="height: 23.6px;width: 13%;font-size: 12px;border-right-style: outset;border-left-style: outset;text-align: center;margin-right: 1%;margin-left: 1%;" placeholder="tx"><input type="text" id="matrix_in-5" class="transfom-opt" style="height: 23.6px;width: 13%;font-size: 12px;border-right-style: outset;border-left-style: outset;text-align: center;" placeholder="ty"><br></li>
+                                        <li style="text-align: center;font-size: 17px;text-shadow: -3px 2px 3px rgb(0,0,0);margin-top: 0%;border-right-style: outset;border-bottom-style: outset;border-left-style: outset;padding-top: 3%;padding-bottom: 6px;"><button class="btn btn-primary" id="set_matrix" type="button" style="padding: 3px 12px;background: rgb(2,73,14);border-style: none;color: rgb(247,247,247);">Set</button><br></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div style="margin-top: 10%;padding: 6px;font-size: 16px;"><a class="btn btn-primary" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-11" href="#collapse-11" role="button" style="background: rgb(91,91,91);width: 100%;font-size: 16px;text-shadow: -3px 2px 4px rgb(0,0,0);color: rgb(255,255,255);">3D&nbsp;<i class="fa fa-caret-right"></i></a>
+                                <div class="collapse" id="collapse-11">
+                                    <ul class="list-unstyled">
+                                        <li style="text-align: center;font-size: 15px;text-shadow: -3px 2px 3px rgb(0,0,0);margin-top: 9%;padding-left: 41px;border-style: outset;border-bottom-style: none;background: #5b5b5b;">Matrix3D:<i class="fas fa-question" id="matrix3d_help" style="padding-left: 21px;"></i><br></li>
+                                        <li class="d-flex justify-content-evenly" style="border-right-style: outset;border-left-style: outset;padding-top: 6px;"><input type="text" id="matrix3d_in" class="transfom-opt" style="width: 16%;border-right-style: outset;border-left-style: outset;" placeholder="a1"><input type="text" id="matrix3d_in-3" class="transfom-opt" style="width: 16%;border-right-style: outset;border-left-style: outset;" placeholder="a2"><input type="text" id="matrix3d_in-2" class="transfom-opt" style="width: 16%;border-right-style: outset;border-left-style: outset;" placeholder="a3"><input type="text" id="matrix3d_in-1" class="transfom-opt" style="width: 16%;border-right-style: outset;border-left-style: outset;" placeholder="a4"></li>
+                                        <li class="d-flex justify-content-evenly" style="border-right-style: outset;border-left-style: outset;padding-top: 6px;"><input type="text" id="matrix3d_in-12" class="transfom-opt" style="width: 16%;border-right-style: outset;border-left-style: outset;" placeholder="b1"><input type="text" id="matrix3d_in-13" class="transfom-opt" style="width: 16%;border-right-style: outset;border-left-style: outset;" placeholder="b2"><input type="text" id="matrix3d_in-14" class="transfom-opt" style="width: 16%;border-right-style: outset;border-left-style: outset;" placeholder="b3"><input type="text" id="matrix3d_in-15" class="transfom-opt" style="width: 16%;border-right-style: outset;border-left-style: outset;" placeholder="b4"></li>
+                                        <li class="d-flex justify-content-evenly" style="border-right-style: outset;border-left-style: outset;padding-top: 6px;"><input type="text" id="matrix3d_in-8" class="transfom-opt" style="width: 16%;border-right-style: outset;border-left-style: outset;" placeholder="c1"><input type="text" id="matrix3d_in-9" class="transfom-opt" style="width: 16%;border-right-style: outset;border-left-style: outset;" placeholder="c2"><input type="text" id="matrix3d_in-10" class="transfom-opt" style="width: 16%;border-right-style: outset;border-left-style: outset;" placeholder="c3"><input type="text" id="matrix3d_in-11" class="transfom-opt" style="width: 16%;border-right-style: outset;border-left-style: outset;" placeholder="c4"></li>
+                                        <li class="d-flex justify-content-evenly" style="border-right-style: outset;border-left-style: outset;padding-top: 6px;"><input type="text" id="matrix3d_in-4" class="transfom-opt" style="width: 16%;border-right-style: outset;border-left-style: outset;" placeholder="d1"><input type="text" id="matrix3d_in-5" class="transfom-opt" style="width: 16%;border-right-style: outset;border-left-style: outset;" placeholder="d2"><input type="text" id="matrix3d_in-6" class="transfom-opt" style="width: 16%;border-right-style: outset;border-left-style: outset;" placeholder="d3"><input type="text" id="matrix3d_in-7" class="transfom-opt" style="width: 16%;border-right-style: outset;border-left-style: outset;" placeholder="d4"></li>
+                                        <li style="margin-top: 0%;border-right-style: outset;border-bottom-style: outset;border-left-style: outset;padding-top: 3%;padding-bottom: 4px;"><button class="btn btn-primary" id="set_matrix_3d" type="button" style="padding: 3px 12px;background: rgb(2,73,14);border-style: none;color: rgb(255,255,255);">Set</button></li>
+                                        <li style="text-align: center;font-size: 15px;text-shadow: -3px 2px 3px rgb(0,0,0);margin-top: 8%;padding-left: 41px;background: #5b5b5b;border-style: outset;border-bottom-style: none;">Rotate3D:<i class="fas fa-question" id="rotate3d_help-1" style="padding-left: 21px;"></i><br></li>
+                                        <li style="padding-top: 7px;border-right-style: outset;border-left-style: outset;"><input type="text" id="rotate3d_in" class="transfom-opt" placeholder="x y z a" style="width: 94%;border-right-style: outset;border-left-style: outset;"></li>
+                                        <li style="text-align: center;font-size: 17px;margin-top: 0%;padding: 3px;padding-left: 0px;border-right-style: outset;border-left-style: outset;color: rgb(0,0,0);font-weight: bold;">X:<input type="number" id="rotatex_in" class="transfom-opt" style="width: 50.6px;">&nbsp;Y:<input type="number" id="rotatey_in" class="transfom-opt" style="width: 50.6px;">&nbsp;<br>Z:<input type="number" id="rotatez_in" class="transfom-opt" style="width: 50.6px;"><br></li>
+                                        <li style="text-align: center;font-size: 15px;margin-top: 0%;padding-left: 0px;border-right-style: outset;border-left-style: outset;padding-top: 3px;color: rgb(0,0,0);font-weight: bold;">Angle:&nbsp;<input type="number" id="rotatex_in-1" class="transfom-opt" style="width: 50.6px;">&nbsp;<select class="unit-opt" style="width: 63.6px;">
+                                                <option value="deg">deg</option>
+                                                <option value="turn">turn</option>
+                                                <option value="rad">rad</option>
+                                            </select><br></li>
+                                        <li style="margin-top: 0%;border-right-style: outset;border-bottom-style: outset;border-left-style: outset;padding-top: 5px;padding-bottom: 5px;"><button class="btn btn-primary" id="set_rotate_3d" type="button" style="padding: 3px 12px;background: rgb(2,73,14);border-style: none;color: rgb(255,255,255);">Set</button></li>
+                                        <li style="text-align: center;font-size: 15px;text-shadow: -3px 2px 3px rgb(0,0,0);margin-top: 8%;padding-left: 41px;background: #5b5b5b;border-style: outset;border-bottom-style: none;height: 24px;">Translate3D:<i class="fas fa-question" id="translate3d_help" style="padding-left: 21px;"></i><br></li>
+                                        <li style="border-right-style: outset;border-left-style: outset;padding-top: 7px;"><input type="text" id="translate3d_in" class="transfom-opt" placeholder="tX tY tZ" style="width: 94%;"></li>
+                                        <li style="text-align: center;font-size: 17px;margin-top: 0%;padding-left: 0px;border-right-style: outset;border-left-style: outset;padding-top: 4px;font-weight: bold;color: rgb(0,0,0);">tX:<input type="number" id="translatetx_in" class="transfom-opt" style="width: 44.6px;">&nbsp;tY:<input type="number" id="translatety_in" class="transfom-opt" style="width: 44.6px;">&nbsp;<br>tZ:<input type="number" id="translatetz_in" class="transfom-opt" style="width: 44.6px;"><br></li>
+                                        <li style="margin-top: 0%;border-style: outset;border-top-style: none;padding-top: 4px;padding-bottom: 4px;"><button class="btn btn-primary" id="set_translate_3d" type="button" style="padding: 3px 12px;background: rgb(2,73,14);border-style: none;padding-bottom: 3px;color: rgb(255,255,255);">Set</button></li>
+                                        <li style="text-align: center;font-size: 15px;text-shadow: -3px 2px 3px rgb(0,0,0);margin-top: 8%;padding-left: 41px;border-style: outset;border-bottom-style: none;background: #5b5b5b;">Scale3D:<i class="fas fa-question" id="scale3d_help-1" style="padding-left: 21px;"></i><br></li>
+                                        <li style="border-right-style: outset;border-left-style: outset;"><input type="text" id="scale3d_in" class="transfom-opt" placeholder="sX sY sZ" style="width: 94%;margin-top: 4px;"></li>
+                                        <li style="text-align: center;font-size: 17px;margin-top: 0%;padding: 4px;padding-left: 0px;border-right-style: outset;border-left-style: outset;color: rgb(0,0,0);font-weight: bold;">sX:<input type="number" id="scalesx_in" class="transfom-opt" style="width: 44.6px;">&nbsp;sY:<input type="number" id="scalesy_in" class="transfom-opt" style="width: 44.6px;">&nbsp;<br>sZ:<input type="number" id="scalesz_in" class="transfom-opt" style="width: 44.6px;"><br></li>
+                                        <li style="margin-top: 0%;border-style: outset;border-top-style: none;padding: 4px;"><button class="btn btn-primary" id="set_scale_3d" type="button" style="padding: 3px 12px;background: rgb(2,73,14);border-style: none;color: rgb(255,255,255);">Set</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
