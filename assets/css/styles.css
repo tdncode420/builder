@@ -1,5 +1,6 @@
 * {
   font-family: 'Aldrich';
+  user-select: none;
 }
 
 .ele_opts {
@@ -109,4 +110,122 @@
 
 .element:hover {
   border: 1px solid red;
+}
+
+.tab-pane,
+#active_build {
+  width: 100%;
+  height: 100%;
+}
+
+
+#active_build * {
+  height: fit-content;
+}
+
+#active_build button:empty:not([contenteditable="true"])::before {
+  content: "Edit...";
+}
+
+#active_build div:empty:not([contenteditable="true"])::before {
+  content: "Empty div...";
+}
+
+#active_build div:empty:not([contenteditable="true"]):not([debugger="true"]) {
+  width: 100%;
+  height: 20%;
+  background-color: rgba(128, 128, 128, 0.192);
+  margin: 0px;
+  text-align: center;
+  font-size: 30px;
+}
+
+#active_build h1:empty:not([contenteditable="true"])::before {
+  content: "Empty Header1...";
+}
+
+#active_build h2:empty:not([contenteditable="true"])::before {
+  content: "Empty Header2...";
+}
+
+#active_build h3:empty:not([contenteditable="true"])::before {
+  content: "Empty Header3...";
+}
+
+#active_build h4:empty:not([contenteditable="true"])::before {
+  content: "Empty Header4...";
+}
+
+#active_build h5:empty:not([contenteditable="true"])::before {
+  content: "Empty Header5...";
+}
+
+#active_build h6:empty:not([contenteditable="true"])::before {
+  content: "Empty Header6...";
+}
+
+#active_build p:empty:not([contenteditable="true"])::before {
+  content: "Empty Paragraph...";
+}
+
+#active_build span:empty:not([contenteditable="true"])::before {
+  content: "Empty Span...";
+}
+
+#active_build small:empty:not([contenteditable="true"])::before {
+  content: "Empty Small...";
+}
+
+#active_build a:empty:not([contenteditable="true"])::before {
+  content: "Empty Link...";
+}
+
+#active_build option:empty::before {
+  content: "Empty Option...";
+}
+
+#active_build code:empty::before {
+  content: "Empty Code...";
+}
+
+.build-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+.build-wrapper-inner {
+  width: 100%;
+  height: 75%;
+  margin: 0%;
+  padding: 0%;
+}
+
+.build-wrapper-inner.full-height {
+  height: 97%;
+}
+
+.attr-wrapper {
+  width: 100%;
+  height: 22%;
+}
+
+.attr-item {
+  width: 100%;
+  display: flex;
+  margin-top: 0.5%;
+}
+
+.attr-key {
+  width: 50%;
+}
+
+.attr-val {
+  width: 50%;
+}
+
+.clear-attr {
+  cursor: pointer;
+  font-weight: bolder;
 }

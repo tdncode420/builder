@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="results"></span>
+    <div id="outer-div">
+        <div id="inner-div">
+            <span id="inner-span">
+                <button id="inner-span-btn">Click</button>
+            </span>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        let res = document.querySelector('#results');
+        let oDiv = document.querySelector('#outer-div');
+        let iDiv = document.querySelector('#inner-div');
+        let btn = document.querySelector('#inner-span-btn');
+
+        oDiv.addEventListener('click', testFn, );
+        iDiv.addEventListener('click', testFn, );
+        btn.addEventListener('click', testFn, );
+
+        function testFn(e){
+            alert
+            // let selfRaw = String(e.target.outerHTML).replace(/\"/g, "");
+            // let curRaw =  e.currentTarget === null ? selfRaw : String(e.currentTarget.outerHTML).replace(/\"/g, "");
+            // let eType = e.bubbles ? "Bubbles" : "Captures";
+            // res.textContent += "Element Event Started @: " + selfRaw;
+            // res.textContent += "\nEvent is Currently @ Element: " + curRaw;
+            // res.textContent += "\nEvent " + eType;
+        };
+    </script>
+</body>
+</html>
